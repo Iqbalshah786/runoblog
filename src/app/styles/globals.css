@@ -6,6 +6,8 @@
 .bg-class {
     background: url('../../../data/10e133c6518d8edcb5ca2d5585b71204.jpeg') no-repeat;
     background-size: cover;
+    /* object-fit: cover; */
+    width: 100%;
 }
 
 

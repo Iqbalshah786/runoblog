@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Logo } from "./Logo";
 import { NavLinks } from "./NavLinks";
 import { Search } from "./Search";
@@ -12,7 +11,7 @@ export function Navbar() {
         <Logo title="runo" color="text-[#F8F9FA]" />
       </div>
 
-      <div className="hidden lg:flex  lg:flex-row lg:flex-shrink-0 lg:items-center gap-4">
+      <div className="hidden lg:flex  lg:flex-row lg:flex-shrink-0 lg:items-center lg:gap-4">
         <nav>
           <ul className="flex items-center gap-6">
             <NavLinks />
@@ -21,7 +20,6 @@ export function Navbar() {
             <Separator />
           </ul>
         </nav>
-
         <Search />
       </div>
     </header>

@@ -17,13 +17,20 @@ export const socialIcons = [
     name: "twitter",
     icon: twitter,
     href: "https://twitter.com/",
-    width: 25,
-    height: 25,
+    width: 30,
+    height: 30,
   },
   {
     name: "youtube",
     icon: youtube,
     href: "https://www.youtube.com/",
+    width: 30,
+    height: 30,
+  },
+  {
+    name: "pinterest",
+    icon: pinterest,
+    href: "https://www.pinterest.com/",
     width: 25,
     height: 25,
   },
@@ -33,14 +40,6 @@ export const socialIcons = [
     href: "https://www.behance.net/",
     width: 20,
     height: 18,
-  },
-
-  {
-    name: "pinterest",
-    icon: pinterest,
-    href: "https://www.pinterest.com/",
-    width: 25,
-    height: 25,
   },
 ];
 
