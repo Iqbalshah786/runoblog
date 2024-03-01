@@ -2,7 +2,7 @@ import { Logo } from "./Logo";
 
 export function Navbar() {
   return (
-    <header className="absolute top-0 left-0 w-screen bg-black bg-opacity-20 h-[8vh]">
+    <header className="absolute top-0 left-0 w-screen bg-black bg-opacity-20 h-[8vh] flex items-center justify-between">
       <Logo title="runo" color="text-[#F8F9FA]" />
     </header>
   );
