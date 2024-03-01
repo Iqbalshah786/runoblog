@@ -14,7 +14,7 @@ export function NavLinks() {
           <li key={link.title}>
             <Link
               href={link.href}
-              className=" text-[#E5E5E5] hover:text-white pb-1 hover:border-b-[3px]  hover:border-[#D4A373]  border-transparent transition-all duration-300 "
+              className=" font-semibold text-[#E5E5E5] hover:text-white pb-1 hover:border-b-[3px]  hover:border-[#D4A373]  border-transparent transition-all duration-300 "
             >
               {link.title}
             </Link>
