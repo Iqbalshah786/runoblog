@@ -3,6 +3,7 @@ import facebook from "./facebook.svg";
 import pinterest from "./pinterest.svg";
 import youtube from "./youtube.svg";
 import twitter from "./twitter.svg";
+import search from "../search.svg";
 
 export const socialIcons = [
   {
@@ -42,3 +43,5 @@ export const socialIcons = [
     height: 25,
   },
 ];
+
+export { search };

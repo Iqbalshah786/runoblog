@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Logo } from "./Logo";
 import { NavLinks } from "./NavLinks";
 import { Search } from "./Search";
@@ -21,7 +22,7 @@ export function Navbar() {
           </ul>
         </nav>
 
-        {/* <Search /> */}
+        <Search />
       </div>
     </header>
   );
