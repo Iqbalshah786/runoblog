@@ -11,11 +11,17 @@ export function Navbar() {
         <Logo title="runo" color="text-[#F8F9FA]" />
       </div>
 
-      <div className="hidden md:flex  md:flex-row md:flex-shrink-0 md:items-center gap-4 ">
-        <NavLinks />
-        <Separator />
-        {/* <SocialMediaLinks />
-        <Search /> */}
+      <div className="hidden lg:flex  lg:flex-row lg:flex-shrink-0 lg:items-center gap-4">
+        <nav>
+          <ul className="flex items-center gap-6">
+            <NavLinks />
+            <Separator />
+            <SocialMediaLinks />
+            <Separator />
+          </ul>
+        </nav>
+
+        {/* <Search /> */}
       </div>
     </header>
   );

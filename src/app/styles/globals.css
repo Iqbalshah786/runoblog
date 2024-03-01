@@ -3,3 +3,12 @@
 @tailwind utilities;
 
 
+.bg-class{
+    background-image: url('../../../data/10e133c6518d8edcb5ca2d5585b71204.jpeg');
+}
+
+.underline-link{
+   border-bottom: solid 3px #D4A373;
+
+   
+}

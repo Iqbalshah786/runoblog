@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function NavLinks() {
   const navigation = [
@@ -7,20 +9,21 @@ export function NavLinks() {
     { title: "Articles", href: "/articles" },
     { title: "Contact Us", href: "/contactUs" },
   ];
+  const pathName = usePathname();
   return (
-    <nav className="">
-      <ul className="flex items-center gap-6">
-        {navigation.map((link) => (
-          <li key={link.title}>
-            <Link
-              href={link.href}
-              className=" font-semibold text-[#E5E5E5] hover:text-white pb-1 hover:border-b-[3px]  hover:border-[#D4A373]  border-transparent transition-all duration-300 "
-            >
-              {link.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      {navigation.map((link) => (
+        <li key={link.title}>
+          <Link
+            href={link.href}
+            className={`font-semibold text-slate-300 hover:text-[#F8F9FA] pb-1 transition-all duration-300 ${
+              pathName === link.href ? "underline-link text-white" : ""
+            }`}
+          >
+            {link.title}
+          </Link>
+        </li>
+      ))}
+    </>
   );
 }
