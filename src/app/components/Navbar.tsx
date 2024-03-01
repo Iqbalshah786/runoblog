@@ -1,9 +1,20 @@
 import { Logo } from "./Logo";
+import { NavLinks } from "./Navlinks";
+import { Search } from "./Search";
+import { SocialMediaLinks } from "./SocialMediaLinks";
 
 export function Navbar() {
   return (
-    <header className="absolute top-0 left-0 w-screen bg-black bg-opacity-20 h-[8vh] flex items-center justify-between">
-      <Logo title="runo" color="text-[#F8F9FA]" />
+    <header className="absolute top-0  w-screen bg-black bg-opacity-20 h-[8vh] flex items-center justify-between px-[4vw]">
+      <div className="font-bold border-2">
+        <Logo title="runo" color="text-[#F8F9FA]" />
+      </div>
+
+      <div className="hidden md:flex  md:flex-row md:flex-shrink-0 md:items-center gap-4 ">
+        <NavLinks />
+        <SocialMediaLinks />
+        <Search />
+      </div>
     </header>
   );
 }

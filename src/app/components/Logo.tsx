@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Props {
   title: string;
   color: string;
@@ -5,8 +7,8 @@ interface Props {
 
 export function Logo({ title, color }: Props) {
   return (
-    <h1 className={`${color} uppercase absolute  left-[2vw] font-bold`}>
-      {title}
-    </h1>
+    <Link href="/">
+      <h1 className={`${color} uppercase `}>{title}</h1>
+    </Link>
   );
 }

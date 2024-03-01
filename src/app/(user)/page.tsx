@@ -1,3 +1,7 @@
 export default function Home() {
-  return <main>{/* <p>Bloggers</p> */}</main>;
+  return (
+    <main>
+      <p>bloggers</p>
+    </main>
+  );
 }
