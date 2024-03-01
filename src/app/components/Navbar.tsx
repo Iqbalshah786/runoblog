@@ -1,6 +1,7 @@
 import { Logo } from "./Logo";
 import { NavLinks } from "./NavLinks";
 import { Search } from "./Search";
+import { Separator } from "./Separator";
 import { SocialMediaLinks } from "./SocialMediaLinks";
 
 export function Navbar() {
@@ -12,6 +13,7 @@ export function Navbar() {
 
       <div className="hidden md:flex  md:flex-row md:flex-shrink-0 md:items-center gap-4 ">
         <NavLinks />
+        <Separator />
         {/* <SocialMediaLinks />
         <Search /> */}
       </div>
