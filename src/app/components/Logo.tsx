@@ -2,13 +2,13 @@ import Link from "next/link";
 
 interface Props {
   title: string;
-  color: string;
+  className: string;
 }
 
-export function Logo({ title, color }: Props) {
+export function Logo({ title, className }: Props) {
   return (
     <Link href="/">
-      <h1 className={`${color} uppercase text-[1.25rem]`}>{title}</h1>
+      <h1 className={`${className} uppercase text-[1.25rem]`}>{title}</h1>
     </Link>
   );
 }

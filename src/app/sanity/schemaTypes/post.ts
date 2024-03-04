@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'string',
+    }),
+    defineField({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -26,13 +31,28 @@ export default defineType({
       to: {type: 'author'},
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'bannerImage',
+      title: 'banner image',
       type: 'image',
       options: {
         hotspot: true,
       },
     }),
+    defineField(
+      {
+        name: 'mainImages',
+        title: 'Main Images', 
+        type: 'array', 
+        of: [
+          {
+            type: 'image',
+            options: {
+              hotspot: true,
+            },
+          },
+        ],
+      }
+    ),
     defineField({
       name: 'categories',
       title: 'Categories',

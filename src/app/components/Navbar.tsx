@@ -8,7 +8,7 @@ export function Navbar() {
   return (
     <header className="absolute top-0  w-screen bg-black bg-opacity-20 h-[8vh] flex items-center justify-between px-[4vw] text-base">
       <div className="font-bold">
-        <Logo title="runo" color="text-[#F8F9FA]" />
+        <Logo title="runo" className="text-[#F8F9FA]" />
       </div>
 
       <div className="hidden lg:flex  lg:flex-row lg:flex-shrink-0 lg:items-center lg:gap-4">

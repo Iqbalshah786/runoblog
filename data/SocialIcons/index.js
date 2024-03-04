@@ -4,7 +4,7 @@ import pinterest from "./pinterest.svg";
 import youtube from "./youtube.svg";
 import twitter from "./twitter.svg";
 import search from "../search.svg";
-
+import arrowBack from "./arrowBack.svg";
 export const socialIcons = [
   {
     name: "facebook",
@@ -43,4 +43,4 @@ export const socialIcons = [
   },
 ];
 
-export { search };
+export { search, arrowBack };
