@@ -11,8 +11,9 @@ export interface Post extends Base {
     author:Author;
     body:Block[];
     categories:Category[];
-    bannerImage:Image;
+    bannerImage:Image[];
     mainImage:Image;
+    blogImages:Image[];
     slug:Slug;
     title:string;
     description:string;
@@ -22,6 +23,7 @@ interface Author extends Base{
     image:Image;
     name:string;
     slug:Slug;
+    profession:string;
 }
 interface Image{
     _type:"image",

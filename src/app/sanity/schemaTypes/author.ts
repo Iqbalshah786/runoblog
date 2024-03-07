@@ -10,7 +10,11 @@ export default defineType({
       title: 'Name',
       type: 'string',
     }),
-    
+    defineField({
+      name: 'profession',
+      title: 'Profession',
+      type: 'string',
+    }),
     defineField({
       name: 'slug',
       title: 'Slug',

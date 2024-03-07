@@ -45,10 +45,18 @@ export default defineType({
         ],
       }
     ),
+    defineField({
+      name: "mainImage",
+      title: "Main image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
     defineField(
       {
-        name: 'mainImages',
-        title: 'Main Images', 
+        name: 'blogImages',
+        title: 'Blog Images', 
         type: 'array', 
         of: [
           {
