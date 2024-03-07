@@ -4,28 +4,16 @@ import { Banner } from "../components/Banner";
 import { Section } from "../components/Section";
 import Image from "next/image";
 import Link from "next/link";
-
-// async function getBannerImage() {
-//   const query = groq`
-//   *[_type == 'post']{
-//     bannerImages,
-//       title,
-//       description,
-//       _createdAt,
-
-//   }
-//   `;
-//   const data = await client.fetch(query);
-//   return data;
-// }
+import post from "../sanity/schemaTypes/post";
 
 async function getData() {
   const query = groq`*[_type == 'post']{
     ...,
     author->,
     categories[]->
-  }| order(_createdAt desc)`;
+}| order(_updatedAt desc)`;
 
+  // *[_type == "todo"] | order(priority desc, _updatedAt desc) articles query
   const data = await client.fetch(query);
 
   return data;
@@ -33,6 +21,7 @@ async function getData() {
 
 export default async function Home() {
   const posts = await getData();
+  console.log(posts);
 
   return (
     <main className="flex flex-col w-screen bg-[#F8F9FA]">
