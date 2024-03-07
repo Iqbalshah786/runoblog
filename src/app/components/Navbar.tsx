@@ -1,27 +1,13 @@
 import { Logo } from "./Logo";
-import { NavLinks } from "./NavLinks";
-import { Search } from "./Search";
-import { Separator } from "./Separator";
-import { SocialMediaLinks } from "./SocialMediaLinks";
+import { NavLinkContainer } from "./NavLinkContainer";
 
 export function Navbar() {
   return (
-    <header className="fixed z-10 top-0  w-screen bg-black bg-opacity-20 h-[8vh] flex items-center justify-between px-[4vw] text-base">
-      <div className="font-bold">
+    <header className="fixed z-10 top-0 w-screen bg-black bg-opacity-20 h-[8vh] flex items-center justify-between px-[4vw]  text-base">
+      <div className="font-bold ">
         <Logo title="runo" className="text-[#F8F9FA]" />
       </div>
-
-      <div className="hidden lg:flex  lg:flex-row lg:flex-shrink-0 lg:items-center lg:gap-4">
-        <nav>
-          <ul className="flex items-center gap-6">
-            <NavLinks />
-            <Separator />
-            <SocialMediaLinks />
-            <Separator />
-          </ul>
-        </nav>
-        <Search />
-      </div>
+      <NavLinkContainer />
     </header>
   );
 }

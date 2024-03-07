@@ -21,7 +21,7 @@ async function getData() {
 
 export default async function Home() {
   const posts = await getData();
-  console.log(posts);
+  // console.log(posts);
 
   return (
     <main className="flex flex-col w-screen bg-[#F8F9FA]">
