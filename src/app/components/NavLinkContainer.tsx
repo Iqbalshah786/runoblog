@@ -45,9 +45,6 @@ export function NavLinkContainer() {
           </ul>
         </nav>
       </div>
-
-      {/*
-       */}
     </>
   );
 }
