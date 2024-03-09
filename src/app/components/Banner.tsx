@@ -65,7 +65,7 @@ export async function Banner() {
   });
 
   return (
-    <div className="w-screen h-[60vh]  ">
+    <div className="w-screen h-[65vh]  ">
       <Slider bannerData={bannerData} />
     </div>
   );
