@@ -30,21 +30,14 @@ export default defineType({
       type: 'reference',
       to: {type: 'author'},
     }),
-    defineField(
-      {
-        name: 'bannerImages',
-        title: 'Banner Images', 
-        type: 'array', 
-        of: [
-          {
-            type: 'image',
-            options: {
-              hotspot: true,
-            },
-          },
-        ],
-      }
-    ),
+    defineField({
+      name: "BannerImage",
+      title: "Banner image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    }),
     defineField({
       name: "mainImage",
       title: "Main image",

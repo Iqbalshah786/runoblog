@@ -11,7 +11,7 @@ export interface Post extends Base {
     author:Author;
     body:Block[];
     categories:Category[];
-    bannerImage:Image[];
+    bannerImage:Image;
     mainImage:Image;
     blogImages:Image[];
     slug:Slug;
