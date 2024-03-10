@@ -20,14 +20,14 @@ export function Slider({ bannerData }: any) {
   return (
     <>
       <div
-        style={{
-          backgroundImage: `url(${urlFor(
-            bannerData[currentIndex].BannerImage.asset
-          ).url()})`,
-        }}
-        className="w-full h-full bg-center bg-cover bg-no-repeat duration-300"
+        // style={{
+        //   backgroundImage: `url(${urlFor(
+        //     bannerData[currentIndex].BannerImage.asset
+        //   ).url()})`,
+        // }}
+        className="w-full h-full bg-center bg-cover bg-no-repeat duration-300 bg-green-500 md:bg-blue-500 lg:bg-red-500"
       >
-        <div className="absolute top-[25vh] left-[4vw] flex flex-col gap-4">
+        <div className="absolute top-[25vh] w-[70vw] left-[15vw] lg:left-[4vw] flex flex-col gap-8 lg:gap-4 ">
           <div
             className={
               bannerData[currentIndex].categories.length > 1
@@ -67,7 +67,7 @@ export function Slider({ bannerData }: any) {
         </div>
       </div>
 
-      <div className="lg:flex absolute lg:top-[55vh] left-[4vw]  gap-4  ">
+      <div className="flex absolute top-[55vh] lg:left-[4vw] w-[10vw] left-[45vw] gap-4 ">
         <button
           className={
             currentIndex === 0
