@@ -33,9 +33,10 @@ export function Slider({ bannerData }: any) {
           ).url()})`,
         }}
         className="w-full h-full bg-center bg-cover bg-no-repeat duration-300"
+
         // bg-green-500 md:bg-blue-500 lg:bg-red-500
       >
-        <div className="absolute top-[19.178vh] w-[70vw] left-[15vw] lg:left-[4vw] flex flex-col gap-8 lg:gap-4 ">
+        <div className="absolute top-[19.178vh] w-[70vw] left-[15vw] lg:left-[4vw] flex flex-col gap-8 lg:gap-4  animate__animated animate__backInRight">
           <div
             className={
               bannerData[currentIndex].categories.length > 1
