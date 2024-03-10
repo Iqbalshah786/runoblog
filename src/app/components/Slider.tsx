@@ -17,6 +17,15 @@ export function Slider({ bannerData }: any) {
     setCurrentIndex(newIndex);
   };
 
+  const renderCategories = (categories: any) =>
+    categories.map((category: any) => (
+      <div key={category._id}>
+        <span className="bg-white bg-opacity-30 text-[#fff] font-bold text-[12px] mt-4  py-[6px] px-[10px] rounded-[8px]">
+          {category.title}
+        </span>
+      </div>
+    ));
+
   return (
     <>
       <div
@@ -35,13 +44,7 @@ export function Slider({ bannerData }: any) {
                 : ""
             }
           >
-            {bannerData[currentIndex].categories.map((category: any) => (
-              <div key={category._id}>
-                <span className="bg-white  bg-opacity-30 text-[#fff] font-bold text-[12px] mt-4  py-[6px] px-[10px] rounded-[8px]">
-                  {category.title}
-                </span>
-              </div>
-            ))}
+            {renderCategories(bannerData[currentIndex].categories)}
           </div>
           <div>
             <h1 className="text-white lg:text-[36px] inline-block lg:w-[35vw] font-bold">
