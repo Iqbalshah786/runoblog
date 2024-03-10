@@ -17,7 +17,7 @@ export async function Banner() {
   const bannerData = await getBannerData();
 
   return (
-    <div className="w-screen h-[65vh]  ">
+    <div className="w-screen h-[45vh] lg:h-[65vh]  ">
       <Slider bannerData={bannerData} />
     </div>
   );

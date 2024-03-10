@@ -7,17 +7,17 @@ import RenderCategories from "./RenderCategories";
 export function Slider({ bannerData }: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevPost = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? bannerData.length - 1 : prevIndex - 1
-    );
-  };
+  // const prevPost = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? bannerData.length - 1 : prevIndex - 1
+  //   );
+  // };
 
-  const nextPost = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === bannerData.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  // const nextPost = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === bannerData.length - 1 ? 0 : prevIndex + 1
+  //   );
+  // };
 
   return (
     <>
@@ -27,10 +27,11 @@ export function Slider({ bannerData }: any) {
             bannerData[currentIndex].BannerImage.asset
           ).url()})`,
         }}
-        className="w-full h-full bg-center bg-cover bg-no-repeat duration-300 "
+        onClick={() => setCurrentIndex((prevIndex) => (prevIndex + 1) % 3)}
+        className="w-full h-full bg-center bg-cover bg-no-repeat duration-300"
         // bg-green-500 md:bg-blue-500 lg:bg-red-500
       >
-        <div className="absolute top-[25vh] w-[70vw] left-[15vw] lg:left-[4vw] flex flex-col gap-8 lg:gap-4 ">
+        <div className="absolute top-[19.178vh] w-[70vw] left-[15vw] lg:left-[4vw] flex flex-col gap-8 lg:gap-4 ">
           <div
             className={
               bannerData[currentIndex].categories.length > 1
@@ -64,7 +65,7 @@ export function Slider({ bannerData }: any) {
         </div>
       </div>
 
-      <div className="flex absolute top-[55vh] lg:left-[4vw] w-[10vw] left-[45vw] gap-4 ">
+      <div className="flex absolute top-[38vh] lg:top-[55vh] lg:left-[4vw] w-[10vw] left-[45vw] gap-4 ">
         {bannerData.map((_: any, index: number) => (
           <Dot
             key={index}
