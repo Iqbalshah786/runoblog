@@ -4,6 +4,7 @@ import { urlFor } from "@/lib/createClient";
 import Link from "next/link";
 
 export function ArticleSection({ posts }: Props) {
+  console.log(posts[0].categories.length);
   return (
     <div className="w-full grid md:grid-cols-4 gap-6">
       {posts.map((post) => (
@@ -16,14 +17,16 @@ export function ArticleSection({ posts }: Props) {
                 fill={true}
                 className=" object-cover"
               />
-              {post.categories.map((category) => (
-                <span
-                  key={category._id}
-                  className="bg-white  bg-opacity-30 text-[#fff] font-bold text-[12px] mt-4 absolute top-0 right-4 py-[6px] px-[10px] rounded-[8px]"
-                >
-                  {category.title}
-                </span>
-              ))}
+              <div className="flex gap-4 items-center absolute top-0 right-4">
+                {post.categories.map((category) => (
+                  <span
+                    key={category._id}
+                    className="bg-white  bg-opacity-30 text-[#fff] font-bold text-[12px] mt-4  py-[6px] px-[10px] rounded-[8px]"
+                  >
+                    {category.title}
+                  </span>
+                ))}
+              </div>
             </div>
 
             <div className="createdAt flex flex-col px-6 gap-4 mt-4 ">
