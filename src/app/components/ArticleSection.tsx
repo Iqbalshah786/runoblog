@@ -4,7 +4,6 @@ import { urlFor } from "@/lib/createClient";
 import Link from "next/link";
 
 export function ArticleSection({ posts }: Props) {
-  console.log(posts[0].categories.length);
   return (
     <div className="w-full grid md:grid-cols-4 gap-6">
       {posts.map((post) => (
