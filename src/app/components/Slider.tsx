@@ -1,40 +1,34 @@
 "use client";
 import { urlFor } from "@/lib/createClient";
 import { useState } from "react";
+import { Dot } from "./Dot";
+import RenderCategories from "./RenderCategories";
 
 export function Slider({ bannerData }: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevPost = () => {
-    const isFirstIndex = currentIndex === 0;
-    const newIndex = isFirstIndex ? bannerData.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? bannerData.length - 1 : prevIndex - 1
+    );
   };
 
   const nextPost = () => {
-    const isLastIndex = currentIndex === bannerData.length - 1;
-    const newIndex = isLastIndex ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === bannerData.length - 1 ? 0 : prevIndex + 1
+    );
   };
-
-  const renderCategories = (categories: any) =>
-    categories.map((category: any) => (
-      <div key={category._id}>
-        <span className="bg-white bg-opacity-30 text-[#fff] font-bold text-[12px] mt-4  py-[6px] px-[10px] rounded-[8px]">
-          {category.title}
-        </span>
-      </div>
-    ));
 
   return (
     <>
       <div
-        // style={{
-        //   backgroundImage: `url(${urlFor(
-        //     bannerData[currentIndex].BannerImage.asset
-        //   ).url()})`,
-        // }}
-        className="w-full h-full bg-center bg-cover bg-no-repeat duration-300 bg-green-500 md:bg-blue-500 lg:bg-red-500"
+        style={{
+          backgroundImage: `url(${urlFor(
+            bannerData[currentIndex].BannerImage.asset
+          ).url()})`,
+        }}
+        className="w-full h-full bg-center bg-cover bg-no-repeat duration-300 "
+        // bg-green-500 md:bg-blue-500 lg:bg-red-500
       >
         <div className="absolute top-[25vh] w-[70vw] left-[15vw] lg:left-[4vw] flex flex-col gap-8 lg:gap-4 ">
           <div
@@ -44,7 +38,7 @@ export function Slider({ bannerData }: any) {
                 : ""
             }
           >
-            {renderCategories(bannerData[currentIndex].categories)}
+            {RenderCategories(bannerData[currentIndex].categories)}
           </div>
           <div>
             <h1 className="text-white lg:text-[36px] inline-block lg:w-[35vw] font-bold">
@@ -71,30 +65,14 @@ export function Slider({ bannerData }: any) {
       </div>
 
       <div className="flex absolute top-[55vh] lg:left-[4vw] w-[10vw] left-[45vw] gap-4 ">
-        <button
-          className={
-            currentIndex === 0
-              ? "bg-white first rounded-full w-[10px] h-[10px]"
-              : "bg-white bg-opacity-20 first rounded-full w-[10px] h-[10px]"
-          }
-          onClick={() => setCurrentIndex(0)}
-        ></button>
-        <button
-          className={
-            currentIndex === 1
-              ? "bg-white first rounded-full w-[10px] h-[10px]"
-              : "bg-white bg-opacity-20 first rounded-full w-[10px] h-[10px]"
-          }
-          onClick={() => setCurrentIndex(1)}
-        ></button>
-        <button
-          className={
-            currentIndex === 2
-              ? "bg-white first rounded-full w-[10px] h-[10px]"
-              : "bg-white bg-opacity-20 first rounded-full w-[10px] h-[10px]"
-          }
-          onClick={() => setCurrentIndex(2)}
-        ></button>
+        {bannerData.map((_: any, index: number) => (
+          <Dot
+            key={index}
+            index={index}
+            currentIndex={currentIndex}
+            onClick={setCurrentIndex}
+          />
+        ))}
       </div>
     </>
   );
