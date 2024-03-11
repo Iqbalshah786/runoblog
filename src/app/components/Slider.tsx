@@ -11,7 +11,7 @@ export function Slider({ bannerData }: any) {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % 3);
-    }, 5000);
+    }, 10000);
 
     // Cleanup the interval when the component unmounts
     return () => clearInterval(intervalId);
