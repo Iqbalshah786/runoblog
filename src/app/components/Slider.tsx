@@ -3,6 +3,7 @@ import { urlFor } from "@/lib/createClient";
 import { useEffect, useState } from "react";
 import { Dot } from "./Dot";
 import RenderCategories from "./RenderCategories";
+import FormatDate from "./FormatDate";
 
 export function Slider({ bannerData }: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,14 +16,6 @@ export function Slider({ bannerData }: any) {
     // Cleanup the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, []);
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("en-US", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-  };
 
   return (
     <>
@@ -53,7 +46,7 @@ export function Slider({ bannerData }: any) {
           </div>
           <div className="flex gap-4 items-start flex-shrink-0">
             <span className="text-white font-normal text-[14px]">
-              {formatDate(bannerData[currentIndex]._updatedAt)}
+              {FormatDate(bannerData[currentIndex]._updatedAt)}
             </span>
             <span className="bg-white h-[2px] w-12 relative top-2"></span>
             <span className="lg:w-[50%] text-white">

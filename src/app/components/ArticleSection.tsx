@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Props } from "./Section";
 import { urlFor } from "@/lib/createClient";
 import Link from "next/link";
+import FormatDate from "./FormatDate";
 
 export function ArticleSection({ posts }: Props) {
   return (
@@ -15,6 +16,7 @@ export function ArticleSection({ posts }: Props) {
                 alt={post.title}
                 fill={true}
                 className=" object-cover"
+                priority={true}
               />
               <div className="flex gap-4 items-center absolute top-0 right-4">
                 {post.categories.map((category) => (
@@ -30,11 +32,7 @@ export function ArticleSection({ posts }: Props) {
 
             <div className="createdAt flex flex-col px-6 gap-4 mt-4 ">
               <span className="text-[#6C757D] font-normal text-[12px]">
-                {new Date(post._updatedAt).toLocaleDateString("en-US", {
-                  day: "numeric",
-                  month: "short",
-                  year: "numeric",
-                })}
+                {FormatDate(post._updatedAt)}
               </span>
               <h1 className="text-[#495057] font-bold  text-[1rem]">
                 {post.title}
@@ -49,6 +47,7 @@ export function ArticleSection({ posts }: Props) {
                   alt="author image"
                   width={50}
                   height={50}
+                  priority={true}
                   className="rounded-full"
                 />
                 <div>

@@ -13,7 +13,7 @@ export function NavLinks() {
   return (
     <>
       {navigation.map((link) => (
-        <li key={link.title}>
+        <li key={link.title} className="cursor-pointer">
           <Link
             href={link.href}
             className={`font-semibold text-slate-300 lg:hover:text-[#F8F9FA] lg:pb-1 lg:transition-all lg:duration-300 ${
