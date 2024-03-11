@@ -3,6 +3,7 @@ import { groq } from "next-sanity";
 import { Post } from "../../../../../types";
 import FormatDate from "@/app/components/FormatDate";
 import { PortableText } from "@portabletext/react";
+import { RichText } from "@/app/components/RichText";
 
 interface Props {
   params: {
@@ -36,7 +37,7 @@ export default async function SlugPage({ params: { slug } }: Props) {
           <span>4 minutes</span>
         </div>
         <div className="text border-2 border-pink-600">
-          <PortableText value={post?.body} />
+          <PortableText value={post?.body} components={RichText} />
         </div>
       </div>
     </main>
