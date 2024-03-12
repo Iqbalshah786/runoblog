@@ -21,7 +21,7 @@ export function Section({ posts }: Props) {
         Popular topics
       </h1>
       <div className="flex flex-col w-full ">
-        <ul className="flex gap-4  text-xs font-bold flex-shrink-0 mb-6">
+        <ul className="flex gap-4  text-xs lg:text-lg font-bold flex-shrink-0 mb-6">
           {categories.map((category) => (
             <li key={category.title}>
               <Link href={"/"}>{category.title}</Link>

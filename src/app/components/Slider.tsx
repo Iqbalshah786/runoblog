@@ -54,7 +54,7 @@ export function Slider({ bannerData }: any) {
         </div>
       </div>
 
-      <div className="flex absolute top-[38vh] lg:top-[45vh] lg:left-[4vw] w-[10vw] left-[45vw] gap-4 ">
+      <div className="flex absolute top-[38vh] lg:top-[50vh] lg:left-[4vw] w-[10vw] left-[45vw] gap-4 ">
         {bannerData.map((_: any, index: number) => (
           <Dot
             key={index}
