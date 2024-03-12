@@ -1,47 +1,38 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 import { NavLinks } from "./NavLinks";
 import { Search } from "./Search";
 import { Separator } from "./Separator";
 import { SocialMediaLinks } from "./SocialMediaLinks";
-import { Menu, X } from "lucide-react";
 
-export function NavLinkContainer() {
-  const [isOpen, setIsOpen] = useState(false);
+interface Props {
+  isOpen: boolean;
+}
+
+export function NavLinkContainer({ isOpen }: Props) {
   return (
     <>
-      <div className="absolute z-10 top-8 right-8">
-        {isOpen === true ? (
-          <X
-            color="white"
-            className="lg:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          />
-        ) : (
-          <Menu
-            color="white"
-            className="lg:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          />
-        )}
-      </div>
       <div
         className={`${
-          isOpen === true ? "relative right-0 top-16" : "hidden"
+          isOpen === true
+            ? "w-full h-full flex items-center justify-center"
+            : "hidden"
         }   lg:inline-block lg:top-0`}
       >
         <nav
-          className={`flex flex-col lg:flex-row lg:flex-shrink-0 lg:items-center lg:gap-4`}
+          className={`flex flex-col lg:flex-row lg:flex-shrink-0 items-center lg:gap-4 ${
+            isOpen === true ? " w-full " : ""
+          }`}
         >
-          <ul className=" flex flex-col  lg:items-center  lg:flex-row lg:gap-6">
+          <ul className={`flex flex-col items-center  lg:flex-row gap-6 `}>
             <NavLinks />
             <Separator className="hidden lg:block" />
             <div className="flex gap-4">
               <SocialMediaLinks />
             </div>
             <Separator className="hidden lg:block" />
-            <Search />
+            <h1 className="font-semibold text-slate-300 hover:text-[#F8F9FA] pb-1 transition-all duration-300">
+              <Link href={"/studio"}>Admin</Link>
+            </h1>
           </ul>
         </nav>
       </div>

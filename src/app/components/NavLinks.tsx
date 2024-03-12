@@ -16,7 +16,7 @@ export function NavLinks() {
         <li key={link.title} className="cursor-pointer">
           <Link
             href={link.href}
-            className={`font-semibold text-slate-300 lg:hover:text-[#F8F9FA] lg:pb-1 lg:transition-all lg:duration-300 ${
+            className={`font-semibold text-slate-300 hover:text-[#F8F9FA] pb-1 transition-all duration-300 ${
               pathName === link.href ? "underline-link text-white" : ""
             }`}
           >
