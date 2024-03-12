@@ -32,14 +32,14 @@ export default async function SlugPage({ params: { slug } }: Props) {
 
   return (
     <main className="relative w-screen my-16 text-[#495057]">
-      <div className="w-[70vw] pl-[4vw]">
-        <div className="absolute flex items-center gap-4  font-bold flex-shrink-0">
+      <div className="w-[60vw] text-justify lg:w-[70vw] pl-[4vw]">
+        <div className="absolute  top-[-2rem] left-[22vw] md:hidden lg:block lg:left-[4vw] md:top-0 flex items-center gap-2 lg:gap-4  font-bold ">
           {FormatDate(post._updatedAt)}
-          <span className="bg-[#C4C4C4] h-[2px] w-12 "></span>
+          <span className="bg-[#C4C4C4] h-[2px] w-5 lg:inline-block lg:mx-3 lg:w-12 "></span>
           <span>4 minutes</span>
         </div>
 
-        <div className="relative left-[18vw] ">
+        <div className="relative left-[18vw]">
           <PortableText value={post?.body} components={RichText} />
         </div>
       </div>
