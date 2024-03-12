@@ -6,7 +6,7 @@ import FormatDate from "./FormatDate";
 
 export function ArticleSection({ posts }: Props) {
   return (
-    <div className="w-full grid md:grid-cols-4 gap-6">
+    <div className="w-full grid lg:grid-cols-2 xl:grid-cols-4 gap-6">
       {posts.map((post) => (
         <Link
           href={{
@@ -14,7 +14,6 @@ export function ArticleSection({ posts }: Props) {
             query: { slug: post?.slug?.current },
           }}
           key={post._id}
-          className=" w-[310px]ß"
         >
           <div className="w-full flex flex-col bg-[#FFFFFF] rounded-lg relative mb-6  overflow-hidden">
             <div className="img-container w-full h-[310px] relative">
