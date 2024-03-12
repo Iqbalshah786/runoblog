@@ -25,14 +25,14 @@ export function NavLinkContainer({ isOpen }: Props) {
         >
           <ul className={`flex flex-col items-center  lg:flex-row gap-6 `}>
             <NavLinks />
-            <Separator className="hidden lg:block" />
-            <div className="flex gap-4">
-              <SocialMediaLinks />
-            </div>
-            <Separator className="hidden lg:block" />
             <h1 className="font-semibold text-slate-300 hover:text-[#F8F9FA] pb-1 transition-all duration-300">
               <Link href={"/studio"}>Admin</Link>
             </h1>
+            <Separator className="hidden lg:block" />
+
+            <div className="flex gap-4">
+              <SocialMediaLinks />
+            </div>
           </ul>
         </nav>
       </div>
