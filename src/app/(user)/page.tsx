@@ -2,6 +2,8 @@ import { client } from "@/lib/createClient";
 import { groq } from "next-sanity";
 import { Section } from "../components/Section";
 
+export const revalidate = 30;
+
 async function getData() {
   const query = groq`*[_type == 'post']{
     ...,
