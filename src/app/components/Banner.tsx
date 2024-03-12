@@ -1,6 +1,5 @@
 import { groq } from "next-sanity";
-import { client, urlFor } from "@/lib/createClient";
-import { Post } from "../../../types";
+import { client } from "@/lib/createClient";
 import { Slider } from "./Slider";
 
 async function getBannerData() {
