@@ -27,7 +27,7 @@ export function Slider({ bannerData }: any) {
         }}
         className="w-full h-full bg-center bg-cover bg-no-repeat duration-300"
       >
-        <div className="absolute top-[19.178vh] w-[70vw] left-[15vw] lg:left-[4vw] flex flex-col gap-8 lg:gap-12">
+        <div className="absolute top-[10vh] md:top-[19.178vh] w-[70vw] left-[15vw] lg:left-[4vw] flex flex-col gap-8 lg:gap-12">
           <div
             className={
               bannerData[currentIndex].categories.length > 1
