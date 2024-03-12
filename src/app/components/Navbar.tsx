@@ -9,7 +9,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed z-50 top-0 w-screen bg-black/70 shadow-md  lg:h-[8vh] lg:bg-opacity-20  flex items-center justify-between px-4 transition-all text-base ${
-        isOpen === true ? "h-[100vh]" : "h-[5vh] "
+        isOpen === true ? "h-[100vh]" : "h-[7vh] "
       }`}
     >
       <div className={`font-bold ${isOpen === true ? "absolute top-4" : ""}`}>
