@@ -32,7 +32,7 @@ export default async function SlugPage({ params: { slug } }: Props) {
 
   return (
     <main className="relative w-screen my-16 text-[#495057]">
-      <div className=" w-[60vw] text-justify lg:w-[70vw] lg:pl-[4vw]">
+      <div className=" w-[70vw] sm:w-[60vw] text-justify lg:w-[70vw] lg:pl-[4vw]">
         <div className="absolute  top-[-2rem] left-[22vw] md:hidden lg:block lg:left-[4vw] md:top-0 flex items-center gap-2 lg:gap-4  font-bold text-sm sm:text-lg">
           {FormatDate(post._updatedAt)}
           <span className="bg-[#C4C4C4] h-[2px] w-5 lg:inline-block lg:mx-3 lg:w-12 "></span>

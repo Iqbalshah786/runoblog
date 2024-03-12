@@ -6,7 +6,7 @@ export const RichText = {
   types: {
     image: ({ value }: any) => {
       return (
-        <div className="inline-block relative w-[30vw] h-[30vh] mr-4 ml-3 my-8">
+        <div className="inline-block relative w-[25vw] h-[10vh]  lg:w-[30vw] lg:h-[30vh] mr-4 ml-[5px]  lg:ml-3 my-8">
           <Image
             src={urlFor(value).url()}
             alt="Post image"
@@ -25,7 +25,9 @@ export const RichText = {
   number: ({ children }: any) => <ol className="">{children}</ol>,
   block: {
     h1: ({ children }: any) => (
-      <h1 className="text-[#d4a373] font-bold text-[40px] ">{children}</h1>
+      <h1 className="text-[#d4a373] font-bold text-[20px] my-4 sm:text-[25px] md:text-[40px] ">
+        {children}
+      </h1>
     ),
     h2: ({ children }: any) => <h2 className="">{children}</h2>,
     h3: ({ children }: any) => <h3 className="">{children}</h3>,
