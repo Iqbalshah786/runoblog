@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Dot } from "./Dot";
 import RenderCategories from "./RenderCategories";
 import FormatDate from "./FormatDate";
+import Link from "next/link";
 
 export function Slider({ bannerData }: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,6 +17,8 @@ export function Slider({ bannerData }: any) {
     // Cleanup the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, []);
+
+  console.log(bannerData[0].slug.current);
 
   return (
     <>
@@ -39,7 +42,15 @@ export function Slider({ bannerData }: any) {
           </div>
           <div>
             <h1 className="text-white lg:text-[36px] inline-block lg:w-[35vw] font-bold">
-              {bannerData[currentIndex].title}
+              <Link
+                className="hover:underline"
+                href={{
+                  pathname: `/post/${bannerData[currentIndex]?.slug?.current}`,
+                  query: { slug: bannerData[currentIndex]?.slug?.current },
+                }}
+              >
+                {bannerData[currentIndex].title}
+              </Link>
             </h1>
           </div>
           <div className="flex gap-4 items-start flex-shrink-0 text-[12px] sm:text-lg">
