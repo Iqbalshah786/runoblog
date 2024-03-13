@@ -12,10 +12,10 @@ export function Footer() {
             </h2>
             <nav className="list-none mb-10 font-normal text-[12px] leading-4 ">
               <li>
-                <Link href="#">mike@runo.com</Link>
+                <Link href="#">ibs@gmail.com</Link>
               </li>
               <li>
-                <p>+944 450 904 505</p>
+                <p>123-123-1234</p>
               </li>
             </nav>
           </div>

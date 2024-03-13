@@ -18,8 +18,6 @@ export function Slider({ bannerData }: any) {
     return () => clearInterval(intervalId);
   }, []);
 
-  console.log(bannerData[0].slug.current);
-
   return (
     <>
       <div
