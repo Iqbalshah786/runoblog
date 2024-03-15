@@ -6,7 +6,6 @@ export function NavLinks() {
   const navigation = [
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
-    { title: "Articles", href: "/articles" },
     { title: "Contact Us", href: "/contactUs" },
   ];
   const pathName = usePathname();
