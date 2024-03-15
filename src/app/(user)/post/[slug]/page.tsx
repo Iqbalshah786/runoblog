@@ -1,9 +1,11 @@
-import { client } from "@/lib/createClient";
+import { client, urlFor } from "@/lib/createClient";
 import { groq } from "next-sanity";
 import { Post } from "../../../../../types";
 import FormatDate from "@/app/components/FormatDate";
 import { PortableText } from "@portabletext/react";
 import { RichText } from "@/app/components/RichText";
+import Image from "next/image";
+import { SocialMediaLinks } from "@/app/components/SocialMediaLinks";
 
 interface Props {
   params: {
@@ -41,6 +43,31 @@ export default async function SlugPage({ params: { slug } }: Props) {
 
         <div className="relative left-[18vw]">
           <PortableText value={post?.body} components={RichText} />
+        </div>
+        <div className="border-t border-gray-300 transform -translate-y-0.5 relative left-[18vw] my-16">
+          <div className="mt-8 lg:mt-4 flex gap-4 flex-col  lg:flex-row items-center  justify-between">
+            <div className="flex gap-4 mb-4 flex-shrink-0">
+              <Image
+                src={urlFor(post.author.image).url()}
+                alt="author image"
+                width={50}
+                height={50}
+                priority={true}
+                className="rounded-full"
+              />
+              <div>
+                <h1 className="text-[#495057] font-bold  text-[12px]">
+                  {post.author.name}
+                </h1>
+                <span className="text-[#6C757D] text-[12px] leading-5 font-normal">
+                  {post.author.profession}
+                </span>
+              </div>
+            </div>
+            <ul className="flex   gap-4 flex-shrink-0">
+              <SocialMediaLinks />
+            </ul>
+          </div>
         </div>
       </div>
     </main>
