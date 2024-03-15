@@ -7,7 +7,7 @@ async function getBannerData() {
     ...,
     author->,
       categories[]->
-  } | order(_updatedAt asc)[0...3]`;
+  } | order(_updatedAt desc)[0...3]`;
   const data = await client.fetch(query);
   return data;
 }
