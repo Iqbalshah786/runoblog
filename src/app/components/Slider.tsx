@@ -14,7 +14,6 @@ export function Slider({ bannerData }: any) {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % 3);
     }, 10000);
 
-    // Cleanup the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, []);
 

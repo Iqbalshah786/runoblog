@@ -11,7 +11,6 @@ async function getData() {
     categories[]->
 }| order(_updatedAt desc)`;
 
-  // *[_type == "todo"] | order(priority desc, _updatedAt desc) articles query
   const data = await client.fetch(query);
 
   return data;
@@ -19,8 +18,6 @@ async function getData() {
 
 export default async function Home() {
   const posts = await getData();
-
-  console.log(posts[0].categories);
 
   return (
     <main className="flex flex-col w-screen bg-[#F8F9FA]">

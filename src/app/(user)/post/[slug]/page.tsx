@@ -13,15 +13,6 @@ interface Props {
   };
 }
 
-// export const generatStaticParams = async () => {
-//   const query = groq`*[_type == 'post']{
-//     slug
-//   }`;
-//   const slugs = await client.fetch(query);
-//   const slugRoutes = slugs.map((slug) => slug?.slug.current);
-//   return slugRoutes.map((slug) => ({ slug }));
-// };
-
 export const revalidate = 30;
 
 export default async function SlugPage({ params: { slug } }: Props) {

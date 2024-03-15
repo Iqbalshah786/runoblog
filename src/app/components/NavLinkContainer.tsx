@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { NavLinks } from "./NavLinks";
-import { Search } from "./Search";
 import { Separator } from "./Separator";
 import { SocialMediaLinks } from "./SocialMediaLinks";
 

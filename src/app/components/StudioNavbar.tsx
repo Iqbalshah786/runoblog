@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { arrowBack } from "../../../data/SocialIcons";
 import Image from "next/image";
-import { Logo } from "./Logo";
 
 export function StudioNavbar(props: any) {
   return (
